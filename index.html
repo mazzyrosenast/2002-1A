@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<title>CodePen - 2002</title>
+<style>
+  #maintitle{
+  background: #8BD3E6;
+    font-size: 150%;
+  color: rgb(250,100,120)
+}
+
+.odd{
+  background: #E6BCD7
+}
+
+.even{
+  background: #F8E08E
+}
+#additem{
+  border-radius: 30px;
+    color: purple
+}
+#theitem{
+  border-radius: 300px;
+}
+</style>
+</head>
+<body translate="no">
+<h2 id="maintitle"> To Do List </h2>
+<ul class="mylists" id="firstlist">
+<li class="even"> Study for vocab</li>
+<li class="odd"> Biology assignement</li>
+<li class="even"> Berkin reading</li>
+<li class="odd"> History reading </li>
+<li class="odd"> EQR </li>
+</ul>
+<button id='additem'>Add</button>
+<input id="theitem">
+<script id="rendered-js">
+      console.clear();
+concolse.log('hello world');
+
+const addbutton = document.getElementById("additem");
+addbutton.addEventListener('click',doClick);
+
+function doClick(e){
+  const theValue = document.getElementaryById("theitem").value;
+  console.log(thevalue);
+  var node = document.createElement("li");               
+var textnode = document.createTextNode("Water");        
+node.appendChild(textnode);                             
+document.getElementById("firstlist").appendChild(node);    
+}
+    </script>
+</body>
+</html>
